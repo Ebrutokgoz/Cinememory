@@ -1,0 +1,7 @@
+{
+  "name": "Cinememory",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
