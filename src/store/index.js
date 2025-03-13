@@ -32,6 +32,18 @@ export const useMemoryStore = defineStore("memoryStore", {
       return state.memories.find((memory) => memory.id === memoryId);
     },
   },
+  actions: {
+    addMemory(memoryData) {
+      const newMemory = {
+        id: new Date().toISOString(),
+        title: memoryData.title,
+        image: memoryData.imageUrl,
+        description: memoryData.description,
+      };
+
+      this.memories.unshift(newMemory);
+    },
+  },
 });
 
 const store = createPinia();
